@@ -1,0 +1,17 @@
+-------------------------------------------------------------------------------
+Test set: com.taxi.TaxiApiApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 22.289 s <<< FAILURE! - in com.taxi.TaxiApiApplicationTests
+contextLoads(com.taxi.TaxiApiApplicationTests)  Time elapsed: 0.028 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.BeanCreationException: 
+Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'tripsController' method 
+public com.taxi.utils.RestResponse com.taxi.controllers.TripsController.NewTrip(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+to {POST /api/trips/listActiveTrips, consumes [application/json || application/xml], produces [application/json || application/xml]}: There is already 'tripsController' bean method
+public com.taxi.utils.RestResponse com.taxi.controllers.TripsController.ActiveTrips(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) mapped.
+Caused by: java.lang.IllegalStateException: 
+Ambiguous mapping. Cannot map 'tripsController' method 
+public com.taxi.utils.RestResponse com.taxi.controllers.TripsController.NewTrip(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+to {POST /api/trips/listActiveTrips, consumes [application/json || application/xml], produces [application/json || application/xml]}: There is already 'tripsController' bean method
+public com.taxi.utils.RestResponse com.taxi.controllers.TripsController.ActiveTrips(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) mapped.
+
